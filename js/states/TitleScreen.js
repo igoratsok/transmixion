@@ -4,6 +4,8 @@ TitleScreen = function(game) {
 
 TitleScreen.prototype = {
 	preload: function() {
+		this.logo = this.game.add.sprite(this.game.world.centerX - 300, this.game.world.centerY - 150, 'loading');
+
 		this.game.load.image('titlescreen', 'img/titlescreen.jpg');
 		this.game.load.image('title0', 'img/title_layer0.jpg');
 		this.game.load.image('title1', 'img/title_layer1.png');

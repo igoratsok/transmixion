@@ -5,8 +5,8 @@ Boot = function(game) {
 
 Boot.prototype = {
 	preload: function() {
-		this.game.load.image('logo', 'img/gamekr_logo.jpg');
 		this.game.stage.backgroundColor = 0xFFFFFF;
+		this.game.load.image('loading', 'img/loading.png');	
 	},
 
 
