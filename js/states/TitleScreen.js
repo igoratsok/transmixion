@@ -10,7 +10,7 @@ TitleScreen.prototype = {
 		this.game.load.image('title0', 'img/title_layer0.jpg');
 		this.game.load.image('title1', 'img/title_layer1.png');
 		this.game.load.image('title2', 'img/title_layerX.png');
-		this.game.load.audio('titlesong', ['audio/transmixion_theme.mp3']);
+		this.game.load.audio('titlesong', ['audio/transmixion_theme.ogg']);
 		this.game.load.image('button-carregar-jogo', 'img/botao_carregar_jogo.png');
 		this.game.load.image('button-novo-jogo', 'img/botao_novo_jogo.png');
 		this.game.load.image('menu-arrow', 'img/menu_arrow.png');

@@ -29,7 +29,23 @@ InputManager = function(game) {
         Phaser.Keyboard.DOWN
     ]);
 
-	game.input.gamepad.start();
+    game.input.gamepad.start();
+
+    var manager = this;
+
+    game.input.gamepad.addCallbacks(this, {
+    	onConnect: function(padIndex) {
+			console.log(padIndex);
+			console.log(game.input.gamepad);
+			//game.input.gamepad.reset();
+    		manager.pad2 = game.input.gamepad._gamepads[padIndex];
+
+    	},
+    	onDown: function(buttonCode, value, padIndex) {
+    		manager.pad2 = game.input.gamepad._gamepads[padIndex];
+    	}
+    });
+
 	if(game.input.gamepad.padsConnected > 0) {
 		if(typeof this.game.input.gamepad.pad1._rawPad != 'undefined' && this.game.input.gamepad.pad1._rawPad != null && this.game.input.gamepad.pad1._rawPad['id'].search('Xbox') != -1) {
 				this.pad2 = this.game.input.gamepad.pad1;
@@ -37,6 +53,7 @@ InputManager = function(game) {
 				this.pad2 = this.game.input.gamepad.pad2;
 		}
 	}
+	
 
 	
    
@@ -67,7 +84,7 @@ InputManager.prototype.upActive = function() {
 
 
     if (typeof this.pad2 != 'undefined' && typeof this.pad2._rawPad != 'undefined') {
-    	isActive = (this.pad2._rawPad.buttons[12].value == 1);
+    	isActive |= (this.pad2._rawPad.buttons[12].value == 1);
     }
 
     return isActive;
@@ -79,7 +96,7 @@ InputManager.prototype.downActive = function() {
     isActive = this.game.input.keyboard.isDown(Phaser.Keyboard.DOWN);
 
     if (typeof this.pad2 != 'undefined' && typeof this.pad2._rawPad != 'undefined') {
-    	isActive = (this.pad2._rawPad.buttons[13].value == 1);
+    	isActive |= (this.pad2._rawPad.buttons[13].value == 1);
     }
 
     return isActive;
