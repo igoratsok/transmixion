@@ -1,4 +1,5 @@
 # transmixion
+<center><img src="http://i.imgur.com/J5iEBMV.jpg" /></center>
 Puzzle/spaceship game made with phaser.io.
 
 In development. Can be played here: http://slumki.github.io/transmixion/ or here: http://transmixion.bitballoon.com/.
