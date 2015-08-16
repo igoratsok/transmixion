@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Transmixion</title>
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/phaser-state-transition-plugin.min.js"></script>
+		
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		
+		<script type="text/javascript" src="js/managers/GameManager.js"></script>
+		<script type="text/javascript" src="js/managers/FadeManager.js"></script>
+		<script type="text/javascript" src="js/managers/InputManager.js"></script>
+
+		<script type="text/javascript" src="js/states/Boot.js"></script>
+		<script type="text/javascript" src="js/states/TitleScreen.js"></script>
+		<script type="text/javascript" src="js/states/SplashState.js"></script>
+
+		<script type="text/javascript">
+
+			var gameManager = new GameManager();
+			gameManager.initialize();
+		</script>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+				background-color: #000000;
+				animation-duration:5s;
+				-webkit-animation-duration: 5s;
+			}
+
+			canvas {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="game">
+		</div>
+	</body>
+
+</html>
